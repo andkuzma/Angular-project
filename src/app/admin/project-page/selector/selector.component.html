@@ -1,0 +1,12 @@
+<p> 
+  <i class="material-icons left" title="На рік назад" (click)="goYear(-1)">keyboard_arrow_left</i>
+  <i class="material-icons left" title="На місяць назад" (click)="go(-1)">arrow_left</i>  
+  <span class="box">
+    <span>{{ dateService.date | async | moment }}</span>
+  </span>  
+  <i class="material-icons right" title="На місяць вперед" (click)="go(1)">arrow_right</i>
+  <i class="material-icons right" title="На рік вперед" (click)="goYear(1)">keyboard_arrow_right</i>
+  
+</p>
+
+<p><i class="material-icons today" title="Перейти на поточну дату" (click)="showToday()">today</i></p>

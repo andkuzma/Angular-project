@@ -1,0 +1,87 @@
+header {
+  padding: 1rem 2rem;
+}
+
+
+
+.box {
+  position: relative;
+  display: flex;
+  margin: 0 auto; 
+  margin-top: 45px;
+  margin-bottom: 45px;
+  width: 800px;   
+  justify-content: center;
+  align-items: center;
+  background: #060c21;
+}
+
+
+// .box:before {
+//   content: '';
+//   position: absolute;
+//   top: -4px;
+//   left: -4px;
+//   right: -4px;
+//   bottom: -4px;
+//   background: #fff;
+//   z-index: -3;  
+// }
+
+// .box:after {
+//   content: '';
+//   position: absolute;
+//   top: -4px;
+//   left: -4px;
+//   right: -4px;
+//   bottom: -4px;
+//   background: #fff;
+//   z-index: -4;
+//   filter: blur(40px);  
+// }
+
+// .box:before,
+// .box:after {
+//   background: linear-gradient(235deg, #920303, #010615, #89ff00); 
+// }
+
+
+// .box {
+//   position: relative;
+//   margin: 300px auto 0;
+//   width: 800px;//   
+//   background: linear-gradient(0deg, #000, #272727);
+// }
+
+.box:before, .box:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+    #0000ff, #00ff00,#ffff00, #ff0000);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.box:after {
+  filter: blur(20px);
+}
+
+
+

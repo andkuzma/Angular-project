@@ -1,0 +1,19 @@
+<nav class="navbar bg-dark">
+  <h2>Pet project</h2>
+
+  <ul>
+      <li routerLinkActive="active">
+          <a href="#">Сторінка 1</a>
+      </li>
+      <li routerLinkActive="active">
+          <a href="#">Сторінка 2</a>
+      </li>
+      <li routerLinkActive="active">
+          <a href="#">Сторінка 3</a>
+      </li>
+      <li routerLinkActive="active">
+          <a [routerLink]="['/cart']">Cart</a>
+      </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
