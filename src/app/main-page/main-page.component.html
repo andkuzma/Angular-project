@@ -1,1 +1,11 @@
-<p>main-page works!</p>
+
+  <p class = "mainContainer" >User name:</p>
+   <input class="userName" type="text" [(ngModel)]="userName">
+  <button (click)="search()">Search</button>
+  <div class = "mainContainer" *ngIf="response">
+    <img class="avatar" src="{{response.avatar_url}}" alt="">
+    <p>Логін: {{response.login}}</p>
+    <p>Ім'я: {{response.name}}</p>
+    <p>Репозиторії: {{response.public_repos}}</p>
+    <p>Біография: {{response.bio}}</p>
+  </div>

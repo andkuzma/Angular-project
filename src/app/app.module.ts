@@ -10,6 +10,8 @@ import { CartPageComponent } from './cart-page/cart-page.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { QuillModule } from 'ngx-quill';
 import { AuthInterceptor } from './shared/auth.interceptor';
+import { NewServiceService } from './new-service.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [  
@@ -23,9 +25,11 @@ import { AuthInterceptor } from './shared/auth.interceptor';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     QuillModule.forRoot()
   ],
   providers: [
+    NewServiceService,
     {
       provide: HTTP_INTERCEPTORS,
       multi: true,
