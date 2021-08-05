@@ -28,7 +28,7 @@ export class AuthService {
   }
   
   get token () {
-      const expDate = new Date("localStorage.getItem('fb-token-exp')")
+      const expDate = new Date(String(localStorage.getItem('fb-token-exp')))
       if ( new Date > expDate ) {
         this.logout()
         return null

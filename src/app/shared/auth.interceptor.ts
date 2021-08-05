@@ -12,10 +12,10 @@ export class AuthInterceptor implements HttpInterceptor{
         private router: Router
     ) {}
     intercept(req: import("@angular/common/http").HttpRequest<any>, next: import("@angular/common/http").HttpHandler): import("rxjs").Observable<import("@angular/common/http").HttpEvent<any>> {
-        if (this.auth.isAuthenticated()) {
+        if (this.auth.isAuthenticated() && this.auth.token !== null ) {
             req = req.clone({
                 setParams: {
-                    // auth: this.auth.token
+                     auth: this.auth.token
                 }
             })
         }
